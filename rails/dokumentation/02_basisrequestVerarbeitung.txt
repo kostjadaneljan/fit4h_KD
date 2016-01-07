@@ -1,0 +1,19 @@
+Aufruf im Webbrowser:
+	http://localhost:3000/events
+
+Was geschieht?
+Der Server bekommt eine Anfrage mit einer Pfadangabe: event
+
+1. Server schaut in der config/routes.rb ob dieser Pfad existiert und ie die Verarbeitung weitergeht.
+	get "events"=> "events#index"
+
+2. Server wird zu einem Controller mit dem Namen EventsController geschickt.
+
+3. Dort muss die Action index vorhanden sein
+
+4. Der Server arbeitet die Befehle in der index-Action ab und gibt die Information an die Viewebene weiter. Dazu muss es einen Unterordner im app/views-Ordner geben, der genauso heißt wieder Controller und es muss eine Datei geben, die genau so heißt wie die Action. 
+
+Die Endung erb der html-Datei sorgt dafür, dass der Ruby-Parser nach Riby-Code und diesen ersetzt bevor der Server den Response zum Browser sendet.
+Der ruby-Paser sucht nacn dem Tag: <%= %>
+	(<%= Time.now %>)
+

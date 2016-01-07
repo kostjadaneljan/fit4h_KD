@@ -1,0 +1,51 @@
+
+<!--******************************************************** -->
+<div class="panel">
+	<div class="row">
+		<div class="medium-2 columns">
+		Titel
+		</div>
+		<div class="medium-10 columns">
+			@project.title
+		</div>
+	</div>
+</div>
+<!--******************************************************** -->
+
+<div class="panel">
+	<div class="row">
+		<div class="medium-2 columns">
+			Beschreibung
+		</div>
+		<div class="medium-10 columns">
+			<%= @project.description %>
+		</div>
+	</div>
+</div>
+<!--******************************************************** -->
+
+<div class="panel">
+	<div class="row">
+		<div class="medium-2 columns">
+			Startzeit
+		</div>
+		<div class="medium-10 columns">
+			<%= @project.start_date %>
+		</div>
+	</div>
+</div>
+<!--******************************************************** -->
+
+<div class="panel">
+	<div class="row">
+		<div class="medium-2 columns">
+			Zurück
+		</div>
+		<div class="medium-10 columns">
+			<%= link_to "back", projects_path %>
+		</div>
+	</div>
+</div>
+
+
+<!--******************************************************** -->

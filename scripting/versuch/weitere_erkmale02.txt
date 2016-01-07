@@ -1,0 +1,17 @@
+# Parameter beim Aufruf der datei
+	in der Variable $ wird alles den Bfehlaufruf betreffende gespeichert
+
+	./test.sh para1 para2
+	$0 enthält den namen der Scriptdatei
+	$1 enthält den 1. Parameter (para1)
+	$2 enthält den 2. Parameter (para2)
+	usw.
+
+# Zeichenketten aneinanderhängen
+	Variablen werden durch ein ${} besonders gekennzeichnet.
+	Beispiel:
+	echo "Scriptname: ${0}, Parameter: ${1}, 2. Parameter: ${2}"
+	aus der Variable $0 wird so ein ${0}
+
+	
+	

@@ -1,0 +1,80 @@
+
+
+
+<!-- ***********************************************************************************-->
+<div class="panel ">
+<div class="row">
+	<div class="medium-3 columns">
+			
+	</div>
+	<div class="medium-9 columns">
+		
+	<h1><%= @movie.title %></h1>
+	</div>
+</div>
+</div>
+<!-- ***********************************************************************************-->
+
+<div class="panel ">
+<div class="row">
+	<div class="medium-2 columns">
+			<strong>Beschreibung </strong>
+	</div>
+	<div class="medium-10 columns">
+		
+	<%= @movie.description %>
+	</div>
+</div>
+</div>
+
+<div class="panel ">
+<!-- ***********************************************************************************-->
+
+<div class="row">
+	<div class="medium-2 columns">
+			Ranking
+	</div>
+	<div class="medium-10 columns">
+		
+	<%= @movie.rating %>
+	</div>
+</div>
+<!-- ***********************************************************************************-->
+<div class="row">
+	<div class="medium-2 columns">
+			Kinostart
+	</div>
+	<div class="medium-10 columns">
+		
+	<%= @movie.kinostart %>
+	</div>
+</div>
+<!-- ***********************************************************************************-->
+<div class="row">
+	<div class="medium-2 columns">
+			Umsatz
+	</div>
+	<div class="medium-10 columns">
+		
+	<%= @movie.total_gross %>
+	</div>
+</div>
+
+<!-- ***********************************************************************************-->
+</div>
+
+<!-- ***********************************************************************************-->
+
+<div class="row">
+	<div class="medium-2 columns">
+		<%= link_to "Back", movies_path %> 	
+	</div>
+	<div class="medium-10 columns">
+		
+
+	</div>
+</div>
+
+
+
+

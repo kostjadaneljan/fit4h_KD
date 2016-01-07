@@ -1,0 +1,10 @@
+Ruby-Console
+	irb auf der Console eingegeben startet eine Eingabeaufforderung, die alle RUBY-Befehle kennt
+
+	Textdatei:
+		Ruby-Code wird in einer Textdatei gespeichert.
+		Die Datei sollte dei Endung re haben: start.rb
+
+		Der Code in der Datei wird ausgeführt:
+		cd VerzeichnisInDerDieCodeDateiLiegt
+		ruby start.rb

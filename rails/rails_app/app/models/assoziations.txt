@@ -1,0 +1,15 @@
+Verknüpfung von Tabellen:
+Tabellen können über eine Verknüpfung von PrimaryKey (events Tabelle) zum ForeingKey (registrations-Tabelle: event _id) erstellen werden.
+
+Vorasusetzungen: 
+	a. ForeingKey muss in der abhändigen Tabellen vorhanden sein 
+	b. models/event.rb
+		has many :registrations
+	c. models /registration.rb
+		belongs_to :event
+
+Wenn es diese Verknüpfungen gibt, bildet Rails die zusätzlichen Methoden:
+	r = Registration.first
+	e = Event.find(r.event_id)
+	r.event 		#zeigt den Event zur Registration
+	e.registrations 	#zeigt die Registrierungen des Event an
