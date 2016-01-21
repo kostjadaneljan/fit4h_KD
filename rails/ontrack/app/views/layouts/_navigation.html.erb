@@ -4,9 +4,22 @@
     <li class="name"><%= link_to 'Home', root_path %></li>
     <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
   </ul>
+
   <div class="top-bar-section">
     <ul>
       <%= render 'layouts/navigation_links' %>
+    </ul>
+
+    <ul>
+     <div class="right">
+     	<% if current_user %>	
+     		<li><%= link_to "logout", logout_path %></li>
+     		<li><%= link_to current_user.name, edit_user_path(current_user.id) %></li>
+     	<% else %>
+     		<li class="active"><%= link_to "Account new", signup_path	%>
+     		<li class="active"><%= link_to "Login", signin_path	%> </li>
+     	<% end %>
+     </div>
     </ul>
   </div>
 </nav>

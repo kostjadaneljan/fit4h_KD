@@ -1,23 +1,32 @@
-<h1>Willkommen</h1>
-<%=link_to "neues Projekt erstellen", new_project_path%>
-<table>
-		<tr>
-			<th>Titel</th>
-			<th>Start</th>
-			<th>Beschreibung</th>
-			<th>anzeigen</th>
-			<th>bearbeiten</th>
-			<th>löschen</th>
-		</tr>
+<p id="notice"><%= notice %></p>
 
-	<% @projects.each do |project| %>
-		<tr>
-			<td><%=project.title %></td>
-			<td><%=project.start_date%></td>
-			<td><%=project.description%></td>
-			<td><%=link_to "show", project_path(project.id)%></td>
-			<td><%=link_to "edit", edit_project_path(project.id)%></td>
-			<td><%=link_to "delete", project_path(project.id), method: :delete, data: {confirm: "Sicher?"} %></td>
-		</tr>
-	<%end%>
+<h1>Listing Projects</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Start date</th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @projects.each do |project| %>
+      <tr>
+        <td><%= project.title %></td>
+        <td><%= project.description %></td>
+        <td><%= project.start_date %></td>
+        <td><%= link_to "tasks", project_tasks_path(project.id) %></td>
+        <td><%= link_to 'Show', project %></td>
+        <td><%= link_to 'Edit', edit_project_path(project) %></td>
+        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
 </table>
+
+<br>
+
+<%= link_to 'New Project', new_project_path %>

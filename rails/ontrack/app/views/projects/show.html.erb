@@ -1,51 +1,19 @@
+<p id="notice"><%= notice %></p>
 
-<!--******************************************************** -->
-<div class="panel">
-	<div class="row">
-		<div class="medium-2 columns">
-		Titel
-		</div>
-		<div class="medium-10 columns">
-			@project.title
-		</div>
-	</div>
-</div>
-<!--******************************************************** -->
+<p>
+  <strong>Title:</strong>
+  <%= @project.title %>
+</p>
 
-<div class="panel">
-	<div class="row">
-		<div class="medium-2 columns">
-			Beschreibung
-		</div>
-		<div class="medium-10 columns">
-			<%= @project.description %>
-		</div>
-	</div>
-</div>
-<!--******************************************************** -->
+<p>
+  <strong>Description:</strong>
+  <%= @project.description %>
+</p>
 
-<div class="panel">
-	<div class="row">
-		<div class="medium-2 columns">
-			Startzeit
-		</div>
-		<div class="medium-10 columns">
-			<%= @project.start_date %>
-		</div>
-	</div>
-</div>
-<!--******************************************************** -->
+<p>
+  <strong>Start date:</strong>
+  <%= @project.start_date %>
+</p>
 
-<div class="panel">
-	<div class="row">
-		<div class="medium-2 columns">
-			Zurück
-		</div>
-		<div class="medium-10 columns">
-			<%= link_to "back", projects_path %>
-		</div>
-	</div>
-</div>
-
-
-<!--******************************************************** -->
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>
